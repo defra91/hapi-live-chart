@@ -7,7 +7,10 @@ const Env = require('./lib/config/env');
 const Server = new Hapi.Server();
 
 Server.connection({
-    port: Env.port
+    port: Env.port,
+    routes: {
+        cors: true
+    }
 });
 
 
@@ -28,10 +31,14 @@ require('./lib/config/mongoose').connect((err) => {
             }
             Server.log('info', 'Server running at: ' + Server.info.uri);
 
-            const Io = require('socket.io')(Server.listener);
+            let io = require('socket.io')(Server.listener);
 
-            Io.on('connection', function(socket) {
-                socket.emit('Oh hi!');
+            io.on('connection', function(socket) {
+                console.log('Somebody connected');
+                io.sockets.emit('user connected');
+                socket.on('temperature-logged', function(doc) {
+                    io.emit('temperature-logged', doc);
+                });
             });
         });
     });

@@ -1,22 +1,32 @@
 <!doctype html>
-<html>
+<html ng-app="liveChart">
   <head>
     <title>Live chart</title>
     <!-- inject:css -->
+    <link rel="stylesheet" href="styles/css/main.css">
     <!-- endinject -->
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" />
-      <button>Send</button>
-    </form>
+
+    <div ng-view></div>
 
     <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
     <!-- endbower -->
 
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/highcharts/highcharts.js"></script>
+
     <!-- inject:js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main-ctrl.js"></script>
+    <script src="scripts/controllers/temperature-ctrl.js"></script>
+    <script src="scripts/services/env.js"></script>
+    <script src="scripts/services/temperature.js"></script>
     <!-- endinject -->
   </body>
 </html>

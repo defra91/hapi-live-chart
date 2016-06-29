@@ -9,7 +9,9 @@
         "beforeEach": false,
         "waits": false,
         "waitsFor": false,
-        "runs": false
+        "runs": false,
+        "angular": false,
+        "$": false
     },
 
     "node" : true,
