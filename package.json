@@ -1,0 +1,39 @@
+{
+  "name": "hapi-live-chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start.server.development": "nf run node server.js -e .env/.development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/defra91/hapi-live-chart.git"
+  },
+  "author": "Luca De Franceschi <luca.defranceschi.91@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/defra91/hapi-live-chart/issues"
+  },
+  "homepage": "https://github.com/defra91/hapi-live-chart#readme",
+  "dependencies": {
+    "boom": "^3.2.2",
+    "good": "^7.0.1",
+    "good-console": "^6.1.2",
+    "good-squeeze": "^4.0.0",
+    "hapi": "^13.4.1",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.5.2",
+    "socket.io": "^1.4.8"
+},
+    "devDependencies": {
+      "gulp": "^3.9.1",
+      "gulp-connect": "^4.1.0",
+      "gulp-inject": "^4.1.0",
+      "gulp-load-plugins": "^1.2.4",
+      "open": "0.0.5",
+      "run-sequence": "^1.2.1",
+      "wiredep": "^4.0.0"
+    }
+}
