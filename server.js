@@ -40,6 +40,10 @@ require('./lib/config/mongoose').connect((err) => {
                     io.emit('temperature-logged', doc);
                 });
             });
+
+            const ioCli = require('socket.io-client');
+            const socket = ioCli.connect(Env.webSocketUrl);
+            GLOBAL.SOCKET = socket;
         });
     });
 });

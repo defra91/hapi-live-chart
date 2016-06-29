@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start.server.development": "nf run node server.js -e .env/.development",
-    "start.client.development": "gulp build && gulp serve"
+    "start.client.development": "gulp build && gulp serve",
+    "start.worker.temperatureLogger": "node scripts/temperature-logger.js"
   },
   "repository": {
     "type": "git",
